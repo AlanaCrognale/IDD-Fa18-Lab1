@@ -78,10 +78,6 @@ Analogwrite() takes in an integer value ranging from 0-255, allowing you to send
 
 ### 1. Take apart your electronic device, and draw a schematic of what is inside. 
 
-![breadboard 1](https://github.com/AlanaCrognale/IDD-Fa18-Lab1/blob/master/breadboard%201.png)
-
-![breadboard 2](https://github.com/AlanaCrognale/IDD-Fa18-Lab1/blob/master/breadboard%202.png)
-
 ![frankenlight 1](https://github.com/AlanaCrognale/IDD-Fa18-Lab1/blob/master/frankenlight%201.png)
 
 ![frankenlight 2](https://github.com/AlanaCrognale/IDD-Fa18-Lab1/blob/master/frankenlight%202.png)
