@@ -18,7 +18,7 @@ void loop() {
     flag = false;
   }
   digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(counter);    // wait for a second
+  delay(counter);    
   if (!flag){
   counter = counter + 10;
   }
@@ -32,5 +32,5 @@ void loop() {
   else{
     counter = counter - 10;
   }
-  delay(counter);     // wait for a second
+  delay(counter);     
 }
