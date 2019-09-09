@@ -6,37 +6,47 @@
 
 ![Breadboard 1](https://github.com/AlanaCrognale/IDD-Fa18-Lab1/blob/master/breadboard%201.png)
 
+![Breadboard 2](https://github.com/AlanaCrognale/IDD-Fa18-Lab1/blob/master/breadboard%202.png)
+
 
 ## Part B. Manually Blink a LED
 
-**a. What color stripes are on a 100 Ohm resistor?**
+**a. What color stripes are on a 220 Ohm resistor?**
 
--220/270 ohm resistor
--red red, black, black, brown
+red (2), red (2), black (0), black (*1), brown (+-1%)
  
 **b. What do you have to do to light your LED?**
--push button
 
+Push the button to complete the circuit
 
 ## Part C. Blink a LED using Arduino
 
 ### 1. Blink the on-board LED
 
 **a. What line(s) of code do you need to change to make the LED blink (like, at all)?**
--none (preloaded)
+
+No changes needed - the preloaded 'Blink' program already had the proper set up to compile and upload.
 
 **b. What line(s) of code do you need to change to change the rate of blinking?**
-the two delay(1000) lines
+
+The two 'delay(1000)' lines - increasing the numerical parameter slows the rate of blinking, and decreasing the numerical parameters speeds up the rate of blinking.
 
 **c. What circuit element would you want to add to protect the board and external LED?**
--resistor
+
+A resistor to limit the amount of power that can enter the board/LED, preventing a potential short.
  
 **d. At what delay can you no longer *perceive* the LED blinking? How can you prove to yourself that it is, in fact, still blinking?**
-~10 ms (less than that, can't see explicit blinking but can still see flickering)
-could take a slow motion camera video or have the arduino program print a statement out between every blink, or have a counter and after say every 10 'loops' turn the led off 
+
+~10 ms - at slightly higher rates, I cannot see explicit blinking but can still see flickering, whereas at 10 ms or lower I cannot perceive any LED changes whatsoever.
+
+To prove to yourself that the LED is blinking, you could:
+-take a slow motion camera video
+-have the arduino program print a statement out (e.g. 'ON' and 'OFF') between every blink
+-include a counter parameter such that after every say 50-100 unpercievable blinks, turn the led off, add a delay, and then turn the led back on, resetting the counter parameter and the 50-100 blink cycle
 
 **e. Modify the code to make your LED blink your way. Save your new blink code to your lab 1 repository, with a link on the README.md.**
 
+[Blink_Your_Way] (https://github.com/AlanaCrognale/IDD-Fa18-Lab1/blob/master/Blink_your_way.ino)
 
 ### 2. Blink your LED
 
