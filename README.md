@@ -62,19 +62,36 @@ To prove to yourself that the LED is blinking, you could:
 
 **a. Are you able to get the LED to glow the whole turning range of the potentiometer? Why or why not?**
 
-yes - the resistors ensure that not too much power gets sent to the point where the LED would blow
+Yes - the 220 Ω resistor ensures that not too high a level of current will get sent to the LED to the point where the LED could spark/explode, regarldess of where the potentiometer is turned.
 
 ## Part E. Fade an LED using Arduino
 
 **a. What do you have to modify to make the code control the circuit you've built on your breadboard?**
--int led = 9 to int led = 11
+
+Change 'int led = 9' to 'int led = 11'.
 
 **b. What is analogWrite()? How is that different than digitalWrite()?**
--analogwrite takes in 0-255, not just boolean
+
+Analogwrite() takes in an integer value ranging from 0-255, allowing you to send variable voltage values.  DigitalWrite takes in only boolean 'HIGH' and 'LOW', sending to the specified pin only an on (typically 5V) or off signal.
 
 ## Part F. FRANKENLIGHT!!!
 
 ### 1. Take apart your electronic device, and draw a schematic of what is inside. 
+
+![breadboard 1](https://github.com/AlanaCrognale/IDD-Fa18-Lab1/blob/master/breadboard%201.png)
+
+![breadboard 2](https://github.com/AlanaCrognale/IDD-Fa18-Lab1/blob/master/breadboard%202.png)
+
+![frankenlight 1](https://github.com/AlanaCrognale/IDD-Fa18-Lab1/blob/master/frankenlight%201.png)
+
+![frankenlight 2](https://github.com/AlanaCrognale/IDD-Fa18-Lab1/blob/master/frankenlight%202.png)
+
+![frankenlight 3](https://github.com/AlanaCrognale/IDD-Fa18-Lab1/blob/master/frankenlight%203.png)
+
+![frankenlight 4](https://github.com/AlanaCrognale/IDD-Fa18-Lab1/blob/master/frankenlight%204.png)
+
+![frankenlight 5](https://github.com/AlanaCrognale/IDD-Fa18-Lab1/blob/master/frankenlight%205.png)
+
 
 **a. Is there computation in your device? Where is it? What do you think is happening inside the "computer?"**
 
