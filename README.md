@@ -46,7 +46,7 @@ To prove to yourself that the LED is blinking, you could:
 
 **e. Modify the code to make your LED blink your way. Save your new blink code to your lab 1 repository, with a link on the README.md.**
 
-[Blink Your Way] (https://github.com/AlanaCrognale/IDD-Fa18-Lab1/blob/master/Blink_your_way.ino).
+[Blink Your Way](https://github.com/AlanaCrognale/IDD-Fa18-Lab1/blob/master/Blink_your_way.ino)
 
 
 ![Blink_Your_Way](https://github.com/AlanaCrognale/IDD-Fa18-Lab1/blob/master/IMG_0423.MOV)
