@@ -115,5 +115,5 @@ Initially, I wanted to see if I could 'hijack' the IR transmitter/LED that alrea
 
 **Make a video showing off your Frankenlight.**
 
-![Frankenlight](https://github.com/AlanaCrognale/IDD-Fa18-Lab1/blob/master/IMG_0448.MOV)
+![Frankenlight](https://github.com/AlanaCrognale/IDD-Fa18-Lab1/blob/master/IMG 0448.MOV)
 
