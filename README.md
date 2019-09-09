@@ -78,6 +78,8 @@ Analogwrite() takes in an integer value ranging from 0-255, allowing you to send
 
 ### 1. Take apart your electronic device, and draw a schematic of what is inside. 
 
+44-Keys IR Remote Controller for Led Light Strips
+
 ![frankenlight 1](https://github.com/AlanaCrognale/IDD-Fa18-Lab1/blob/master/frankenlight%201.png)
 
 ![frankenlight 2](https://github.com/AlanaCrognale/IDD-Fa18-Lab1/blob/master/frankenlight%202.png)
@@ -91,27 +93,27 @@ Analogwrite() takes in an integer value ranging from 0-255, allowing you to send
 
 **a. Is there computation in your device? Where is it? What do you think is happening inside the "computer?"**
 
--no computation in the sense of having a microprocessor etc
--possibly 'computation' in the sense of needing to know which button is pressed corresponds to which 'color'/mode, though not sure if this processing occurs on the remote side or on the receiver side
+I believe the black dot in the upper portion of the device is a microprocessor/CPU which would be used to retain information related to programming the LED light strips, i.e. color, brightness, speed, mode, etc.
 
 **b. Are there sensors on your device? How do they work? How is the sensed information conveyed to other portions of the device?**
 
--yes: IR sensor (transmitter) on one side that sends signals to IR receiver which is attached to the actual LED light strips, haptic sensors on other side for button feedback
+Yes - there is an IR sensor (transmitter) on one side that sends signals to the IR receiver which is attached to the actual LED light strips and powered via a wall plug.  The other side of the remote has haptic sensors for button feedback when pressed.
 
 **c. How is the device powered? Is there any transformation or regulation of the power? How is that done? What voltages are used throughout the system?**
 
--battery powered - doesn't appear to be any transformation.  The 'on/off' button would control power regulation for this, though it's not clear where this is located or how it's done from the circuitboard.  Since the power comes only from a single 3V battery, i.e. no variable power source, doesn't seem to be a need for something like a pentiometer to regulate current flow. Power should be a binary on or off, i.e. 0V or 3V. Things like brightness levels and different colors e.g. would affect the power level emitted from the actual light strips, but just from the remote side, this seems to be more boolean.
+The remote is battery powered, and there doesn't appear to be any transformation of power, since the power comes only from a single 3V battery i.e. no variable power source (power should be a binary on or off, either 3V or 0V), so there doesn't seem to be a need for something like a potentiometer to regulate current flow.  Things like brightness levels and different colors, for example, would affect the power level emitted from the actual LED light strips, but as far as the power on the remote/transmitter side, there should only be one mode for on and one for off.  The 'on/off' button would regulate the power level for this, though it's not clear exactly where this is located on the circuitboard, or if it's controlled on the software side via programming the microprocessor).  
 
 **d. Is information stored in your device? Where? How?**
--memory is stored somewhere in this whole setup, since the most recent memory state (color chose, brightness level, mode chose, power, etc.) is retained even when powered off.  I don't believe that this memory retention is actually stored on the remote - i have a suspicion it may be stored on the receiver side (i looked online and could not find any details about this).  If it is stored on the device, it may have to do with the two little golden squares on the board as can seen above?
 
+Yes - memory is stored somewhere in this whole device setup, since the most recent memory state (color choice, brightness level, mode choice, etc.) is retained even when powered off.  I am not sure whether this memory retention is actually stored on the remote or whether it is stored on the receiver side (I was unable to find specific details of how this system works online).  If the memory is stored on the remote, it is possible it is located on the two small gold colored squares on the board as seen from the above pictures, or it is possible it is just stored as part of the microprocessor programming and cannot be physically seen.
 
 ### 2. Using your schematic, figure out where a good point would be to hijack your device and implant an LED.
 
-**Describe what you did here.**
+Initially, I wanted to see if I could 'hijack' the IR transmitter/LED that already exists on the board; however, I ran into a few issues with this:  Firstly, when I took my device apart, I realized that I had accidentally snapped some portions of the circuitboard, so it is very likely that some of the more vital components controlling the IR transmitter were damaged.  Next, I thought I would try just lighting up the LED on the board, ignoring any IR transmistter aspects.  When I first started to test this, connecting the two soldered points of contact on the LED to power, at first nothing happened and then after a few seconds I heard what sounded like a spark, and then I realized that I had no resistors to prevent unlimited power flow to the LED.  So, my suspcicion is that I accidentally had blown the fuse inside this LED.  Alternatively, I wondered whether it is also possible that this LED is designed to not to light up if the IR transmitter portion of it is also not in use.  Given these constraints, I set up a design so that the devices battery holding setup would be used to light up and power an external LED, adding a push button so that the LED only lights when the button is pressed.
 
 ### 3. Build your light!
 
 **Make a video showing off your Frankenlight.**
 
-**Include any schematics or photos in your lab write-up.**
+![External LED Blink](https://github.com/AlanaCrognale/IDD-Fa18-Lab1/blob/master/IMG_0448.MOV)
+
