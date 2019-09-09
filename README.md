@@ -55,7 +55,7 @@ To prove to yourself that the LED is blinking, you could:
 
 **Make a video of your LED blinking, and add it to your lab submission.**
 
-[link to your video here; feel free to upload to youtube and just paste in a link here]
+![External LED Blink](https://github.com/AlanaCrognale/IDD-Fa18-Lab1/blob/master/IMG_0424.MOV)
 
 
 ## Part D. Manually fade an LED
